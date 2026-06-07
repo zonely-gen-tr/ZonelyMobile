@@ -7,7 +7,7 @@
     "sha256":  "aa367b06d379da89b1eafdbd56538b1a604af401b97d3a2c04caea79216d989e",
     "force":  false,
     "notes":  [
-                  "Domain'e ozel APK uretimi eklendi"
+                  "İlk güncelleme!"
               ],
     "platforms":  {
                       "android":  {
@@ -26,7 +26,7 @@
                                   "downloadUrl":  "",
                                   "channel":  "TestFlight/App Store",
                                   "notes":  [
-                                                "iOS projesi hazır; IPA yayını Mac/Xcode ve Apple hesabı ile yapılır."
+                                                "iOS projesi için bekliyoruz."
                                             ]
                               }
                   }
