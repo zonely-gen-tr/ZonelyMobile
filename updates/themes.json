@@ -1,23 +1,23 @@
 {
     "app":  "zonely-mobile",
-    "versionCode":  68,
-    "versionName":  "1.0.68",
-    "apkUrl":  "https://github.com/zonely-gen-tr/ZonelyMobile/releases/download/v1.0.68/zonely-template-v68.apk",
-    "templateUrl":  "https://github.com/zonely-gen-tr/ZonelyMobile/releases/download/v1.0.68/zonely-template-v68.apk",
-    "sha256":  "aa367b06d379da89b1eafdbd56538b1a604af401b97d3a2c04caea79216d989e",
+    "versionCode":  69,
+    "versionName":  "1.0.69",
+    "apkUrl":  "https://raw.githubusercontent.com/zonely-gen-tr/ZonelyMobile/main/downloads/zonely-v69.apk",
+    "templateUrl":  "https://raw.githubusercontent.com/zonely-gen-tr/ZonelyMobile/main/downloads/zonely-v69.apk",
+    "sha256":  "b7920d9a0117e312ba5461634b278ef4aba328a3537989d123ce8b90f547772e",
     "force":  false,
     "notes":  [
-                  "İlk güncelleme!"
+                  "Email input label changed to Username or email."
               ],
     "platforms":  {
                       "android":  {
                                       "type":  "apk",
-                                      "versionCode":  68,
-                                      "versionName":  "1.0.68",
-                                      "downloadUrl":  "https://github.com/zonely-gen-tr/ZonelyMobile/releases/download/v1.0.68/zonely-template-v68.apk",
-                                      "templateUrl":  "https://github.com/zonely-gen-tr/ZonelyMobile/releases/download/v1.0.68/zonely-template-v68.apk",
-                                      "sha256":  "aa367b06d379da89b1eafdbd56538b1a604af401b97d3a2c04caea79216d989e",
-                                      "releaseUrl":  "https://github.com/zonely-gen-tr/ZonelyMobile/releases/tag/v1.0.68"
+                                      "versionCode":  69,
+                                      "versionName":  "1.0.69",
+                                      "downloadUrl":  "https://raw.githubusercontent.com/zonely-gen-tr/ZonelyMobile/main/downloads/zonely-v69.apk",
+                                      "templateUrl":  "https://raw.githubusercontent.com/zonely-gen-tr/ZonelyMobile/main/downloads/zonely-v69.apk",
+                                      "sha256":  "b7920d9a0117e312ba5461634b278ef4aba328a3537989d123ce8b90f547772e",
+                                      "releaseUrl":  "https://github.com/zonely-gen-tr/ZonelyMobile"
                                   },
                       "ios":  {
                                   "type":  "ipa",
@@ -26,7 +26,7 @@
                                   "downloadUrl":  "",
                                   "channel":  "TestFlight/App Store",
                                   "notes":  [
-                                                "iOS projesi için bekliyoruz."
+                                                "iOS project is ready; IPA publishing requires Mac/Xcode and an Apple account."
                                             ]
                               }
                   }
