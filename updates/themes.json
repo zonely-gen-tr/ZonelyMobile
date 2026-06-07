@@ -1,0 +1,12 @@
+{
+    "app":  "zonely-mobile",
+    "versionCode":  65,
+    "versionName":  "1.0.65",
+    "apkUrl":  "https://github.com/zonely-gen-tr/ZonelyMobile/releases/download/v1.0.65/zonely-v65.apk",
+    "sha256":  "19e8e189216f27acb4db8b3622b688dd402e2c1078648b85f084e153837f1141",
+    "force":  false,
+    "notes":  [
+                  "Uygulama adi Zonely olarak guncellendi",
+                  "Sayfa gecislerinde yukleme bitmeden yeni sayfa acilmasi engellendi"
+              ]
+}
