@@ -149,7 +149,7 @@
         <img class="logo" src="logo.png" alt="Zonely logosu">
         <div>
           <h1>Zonely Mobile</h1>
-          <p>Android APK ve iOS yayin bilgileri.</p>
+          <p>Android APK ve iOS yayın bilgileri.</p>
         </div>
       </div>
     </section>
@@ -158,10 +158,10 @@
       <article class="card">
         <div>
           <h2>Android</h2>
-          <p class="muted">APK guncellemesi GitHub Releases uzerinden yayinlanir.</p>
+          <p class="muted">APK güncellemesi GitHub Releases üzerinden yayınlanır.</p>
         </div>
         <div class="meta" id="android-meta">
-          <span>Surum bilgisi yukleniyor...</span>
+          <span>Sürüm bilgisi yükleniyor...</span>
         </div>
         <a class="button" id="android-download" href="#" aria-disabled="true">APK indir</a>
       </article>
@@ -169,12 +169,12 @@
       <article class="card">
         <div>
           <h2>iOS</h2>
-          <p class="muted">IPA/TestFlight bilgisi hazir olunca burada gorunur.</p>
+          <p class="muted">IPA/TestFlight bilgisi hazır olunca burada görünür.</p>
         </div>
         <div class="meta" id="ios-meta">
-          <span>iOS bilgisi yukleniyor...</span>
+          <span>iOS bilgisi yükleniyor...</span>
         </div>
-        <a class="button" id="ios-download" href="#" aria-disabled="true">iOS hazirlaniyor</a>
+        <a class="button" id="ios-download" href="#" aria-disabled="true">iOS hazırlanıyor</a>
       </article>
     </section>
   </main>
@@ -208,7 +208,7 @@
         const androidNotes = notesHtml(android.notes || manifest.notes);
 
         androidMeta.innerHTML = [
-          `<span>Surum: <strong>${androidVersionName}</strong> (${androidVersionCode})</span>`,
+          `<span>Sürüm: <strong>${androidVersionName}</strong> (${androidVersionCode})</span>`,
           androidSha ? `<span>SHA256: <code>${androidSha}</code></span>` : "",
           androidNotes ? `<span>${androidNotes}</span>` : "",
         ].filter(Boolean).join("");
@@ -221,21 +221,21 @@
         const iosAvailable = ios.available === true && ios.downloadUrl;
         const iosNotes = notesHtml(ios.notes);
         iosMeta.innerHTML = [
-          `<span>Durum: <strong>${iosAvailable ? "Hazir" : "Hazirlaniyor"}</strong></span>`,
-          ios.versionName ? `<span>Surum: <strong>${ios.versionName}</strong></span>` : "",
+          `<span>Durum: <strong>${iosAvailable ? "Hazır" : "Hazırlanıyor"}</strong></span>`,
+          ios.versionName ? `<span>Sürüm: <strong>${ios.versionName}</strong></span>` : "",
           ios.channel ? `<span>Kanal: ${clean(ios.channel)}</span>` : "",
           iosNotes ? `<span>${iosNotes}</span>` : "",
         ].filter(Boolean).join("");
 
         if (iosAvailable) {
           iosDownload.href = ios.downloadUrl;
-          iosDownload.textContent = ios.type === "ipa" ? "IPA indir" : "iOS ac";
+          iosDownload.textContent = ios.type === "ipa" ? "IPA indir" : "iOS aç";
           iosDownload.removeAttribute("aria-disabled");
         }
       })
       .catch(() => {
-        androidMeta.textContent = "Surum bilgisi alinamadi.";
-        iosMeta.textContent = "iOS bilgisi alinamadi.";
+        androidMeta.textContent = "Sürüm bilgisi alınamadı.";
+        iosMeta.textContent = "iOS bilgisi alınamadı.";
       });
   </script>
 </body>
