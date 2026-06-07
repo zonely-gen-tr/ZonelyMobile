@@ -1,9 +1,7 @@
 # Zonely
 
-Bu repo sadece Zonely Android uygulamasinin indirme ve guncelleme dosyalarini barindirir.
+Bu depo yalnızca Zonely Android uygulamasının indirme ve güncelleme dosyalarını içerir.
 
-- Indirme sayfasi: https://zonely-gen-tr.github.io/ZonelyMobile/
-- Guncelleme manifesti: https://raw.githubusercontent.com/zonely-gen-tr/ZonelyMobile/main/updates/themes.json
-- APK release dosyalari: https://github.com/zonely-gen-tr/ZonelyMobile/releases
-
-Kaynak kod bu repoda yayinlanmaz.
+İndirme sayfası: https://zonely-gen-tr.github.io/ZonelyMobile/
+- Manifest güncellemesi: https://raw.githubusercontent.com/zonely-gen-tr/ZonelyMobile/main/updates/themes.json
+- APK sürüm dosyaları: https://github.com/zonely-gen-tr/ZonelyMobile/releases
