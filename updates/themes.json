@@ -26,7 +26,7 @@
                                   "downloadUrl":  "",
                                   "channel":  "TestFlight/App Store",
                                   "notes":  [
-                                                "iOS project is ready; IPA publishing requires Mac/Xcode and an Apple account."
+                                                "iOS project is ready."
                                             ]
                               }
                   }
