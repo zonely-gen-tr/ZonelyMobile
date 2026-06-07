@@ -1,10 +1,11 @@
 # Zonely Mobile
 
-This repository only contains the download and update files for the Zonely Mobile application.
+Bu repo sadece Zonely Mobile uygulamasinin indirme ve guncelleme dosyalarini barindirir.
 
-Download page: https://zonely-gen-tr.github.io/ZonelyMobile/
-- Update manifest: https://raw.githubusercontent.com/zonely-gen-tr/ZonelyMobile/main/updates/themes.json
-- Android APK release files: https://github.com/zonely-gen-tr/ZonelyMobile/releases
-- iOS IPA/TestFlight information is published from the `platforms.ios` field in the manifest.
+- Indirme sayfasi: https://zonely-gen-tr.github.io/ZonelyMobile/
+- Guncelleme manifesti: https://raw.githubusercontent.com/zonely-gen-tr/ZonelyMobile/main/updates/themes.json
+- Android APK release dosyalari: https://github.com/zonely-gen-tr/ZonelyMobile/releases
+- iOS IPA/TestFlight bilgisi manifestteki `platforms.ios` alanindan yayinlanir.
 
-The source code is not published in this repository.
+Kaynak kod bu repoda yayinlanmaz.
+Android release asset'i domain icermeyen template APK'dir; domain'e ozel APK'yi `mobile-builder` PHP endpoint'i uretip imzalar.
