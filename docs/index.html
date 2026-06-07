@@ -3,102 +3,239 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zonely APK İndir</title>
+  <title>Zonely Mobile</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: #eee;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
+    :root {
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #09090b;
+      color: #f8fafc;
     }
 
-    .container {
-      max-width: 480px;
-      width: 100%;
-      background: #1e1e1e;
-      border: 1px solid #333;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: #09090b;
+    }
+
+    main {
+      width: min(100%, 760px);
+      display: grid;
+      gap: 22px;
+    }
+
+    .panel,
+    .card {
+      border: 1px solid #27272a;
+      border-radius: 8px;
+      background: #111113;
+    }
+
+    .panel {
+      display: grid;
+      gap: 12px;
+      padding: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
     .logo {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 15px;
+      width: 54px;
+      height: 54px;
+      border-radius: 8px;
+      object-fit: contain;
+      background: #18181b;
+      border: 1px solid #27272a;
+      padding: 6px;
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 0;
     }
 
     h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
+      font-size: clamp(30px, 7vw, 48px);
+      line-height: 1;
+      letter-spacing: 0;
     }
 
-    p {
-      margin: 0 0 20px;
-      color: #bbb;
+    h2 {
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    p,
+    .muted {
+      color: #a1a1aa;
+      line-height: 1.55;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      display: grid;
+      gap: 14px;
+      padding: 18px;
+      min-height: 220px;
     }
 
     .meta {
-      background: #2a2a2a;
-      border: 1px solid #333;
+      display: grid;
+      gap: 8px;
+      padding: 12px;
+      border: 1px solid #27272a;
       border-radius: 8px;
-      padding: 10px;
-      margin-bottom: 15px;
+      background: #18181b;
+      color: #d4d4d8;
       font-size: 14px;
-      color: #ddd;
-      text-align: left;
     }
 
-    .button {
-      display: inline-block;
-      padding: 12px 20px;
+    a.button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
       background: #2563eb;
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
+      font-weight: 800;
     }
 
-    .button[aria-disabled="true"] {
-      background: #555;
+    a.button[aria-disabled="true"] {
       pointer-events: none;
+      background: #27272a;
+      color: #71717a;
+    }
+
+    code {
+      color: #bfdbfe;
+      word-break: break-all;
+    }
+
+    @media (max-width: 680px) {
+      body {
+        place-items: start center;
+        padding: 16px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="logo" src="https://raw.githubusercontent.com/zonely-gen-tr/ZonelyMobile/refs/heads/main/docs/logo.png" alt="Zonely logosu">
-    <h1>Zonely</h1>
-    <p>Android uygulamasının en son APK sürümü</p>
+  <main>
+    <section class="panel">
+      <div class="brand">
+        <img class="logo" src="logo.png" alt="Zonely logosu">
+        <div>
+          <h1>Zonely Mobile</h1>
+          <p>Android APK ve iOS yayin bilgileri.</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="meta" id="meta">Sürüm bilgisi yükleniyor...</div>
+    <section class="grid" aria-label="Platform indirmeleri">
+      <article class="card">
+        <div>
+          <h2>Android</h2>
+          <p class="muted">APK guncellemesi GitHub Releases uzerinden yayinlanir.</p>
+        </div>
+        <div class="meta" id="android-meta">
+          <span>Surum bilgisi yukleniyor...</span>
+        </div>
+        <a class="button" id="android-download" href="#" aria-disabled="true">APK indir</a>
+      </article>
 
-    <a id="download" class="button" href="#" aria-disabled="true">APK indir</a>
-  </div>
+      <article class="card">
+        <div>
+          <h2>iOS</h2>
+          <p class="muted">IPA/TestFlight bilgisi hazir olunca burada gorunur.</p>
+        </div>
+        <div class="meta" id="ios-meta">
+          <span>iOS bilgisi yukleniyor...</span>
+        </div>
+        <a class="button" id="ios-download" href="#" aria-disabled="true">iOS hazirlaniyor</a>
+      </article>
+    </section>
+  </main>
 
   <script>
     const manifestUrl = "https://raw.githubusercontent.com/zonely-gen-tr/ZonelyMobile/main/updates/themes.json";
-    const meta = document.getElementById("meta");
-    const download = document.getElementById("download");
+    const androidMeta = document.getElementById("android-meta");
+    const androidDownload = document.getElementById("android-download");
+    const iosMeta = document.getElementById("ios-meta");
+    const iosDownload = document.getElementById("ios-download");
+
+    function clean(value) {
+      return value == null ? "" : String(value);
+    }
+
+    function notesHtml(notes) {
+      if (Array.isArray(notes)) return notes.map(clean).filter(Boolean).join("<br>");
+      return clean(notes);
+    }
 
     fetch(manifestUrl, { cache: "no-store" })
-      .then(res => res.json())
-      .then(manifest => {
-        const notes = Array.isArray(manifest.notes) ? manifest.notes.join("\n") : manifest.notes || "";
-        meta.innerHTML = `Sürüm: <strong>${manifest.versionName || "-"}</strong> (${manifest.versionCode || "-"})<br>${notes}`;
+      .then((response) => response.json())
+      .then((manifest) => {
+        const platforms = manifest.platforms || {};
+        const android = platforms.android || {};
+        const ios = platforms.ios || {};
+        const androidVersionName = android.versionName || manifest.versionName || "-";
+        const androidVersionCode = android.versionCode || manifest.versionCode || "-";
+        const androidSha = android.sha256 || manifest.sha256 || "";
+        const androidUrl = android.downloadUrl || manifest.apkUrl || "";
+        const androidNotes = notesHtml(android.notes || manifest.notes);
 
-        if (manifest.apkUrl) {
-          download.href = manifest.apkUrl;
-          download.removeAttribute("aria-disabled");
+        androidMeta.innerHTML = [
+          `<span>Surum: <strong>${androidVersionName}</strong> (${androidVersionCode})</span>`,
+          androidSha ? `<span>SHA256: <code>${androidSha}</code></span>` : "",
+          androidNotes ? `<span>${androidNotes}</span>` : "",
+        ].filter(Boolean).join("");
+
+        if (androidUrl) {
+          androidDownload.href = androidUrl;
+          androidDownload.removeAttribute("aria-disabled");
+        }
+
+        const iosAvailable = ios.available === true && ios.downloadUrl;
+        const iosNotes = notesHtml(ios.notes);
+        iosMeta.innerHTML = [
+          `<span>Durum: <strong>${iosAvailable ? "Hazir" : "Hazirlaniyor"}</strong></span>`,
+          ios.versionName ? `<span>Surum: <strong>${ios.versionName}</strong></span>` : "",
+          ios.channel ? `<span>Kanal: ${clean(ios.channel)}</span>` : "",
+          iosNotes ? `<span>${iosNotes}</span>` : "",
+        ].filter(Boolean).join("");
+
+        if (iosAvailable) {
+          iosDownload.href = ios.downloadUrl;
+          iosDownload.textContent = ios.type === "ipa" ? "IPA indir" : "iOS ac";
+          iosDownload.removeAttribute("aria-disabled");
         }
       })
       .catch(() => {
-        meta.textContent = "Sürüm bilgisi alınamadı.";
+        androidMeta.textContent = "Surum bilgisi alinamadi.";
+        iosMeta.textContent = "iOS bilgisi alinamadi.";
       });
   </script>
 </body>

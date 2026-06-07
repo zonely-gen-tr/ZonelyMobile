@@ -7,5 +7,25 @@
     "force":  false,
     "notes":  [
                   "Hatalar giderildi"
-              ]
+              ],
+    "platforms":  {
+                      "android":  {
+                                      "type":  "apk",
+                                      "versionCode":  67,
+                                      "versionName":  "1.0.67",
+                                      "downloadUrl":  "https://github.com/zonely-gen-tr/ZonelyMobile/releases/download/v1.0.67/zonely-v67.apk",
+                                      "sha256":  "f1e8309b8c06b9ad8ffb18ca31b97d4bfeea8d1929b091b457e0e1a37a58a34b",
+                                      "releaseUrl":  "https://github.com/zonely-gen-tr/ZonelyMobile/releases/tag/v1.0.67"
+                                  },
+                      "ios":  {
+                                  "type":  "ipa",
+                                  "available":  false,
+                                  "versionName":  "",
+                                  "downloadUrl":  "",
+                                  "channel":  "TestFlight/App Store",
+                                  "notes":  [
+                                                "iOS projesi hazir; IPA yayini Mac/Xcode ve Apple hesabi ile yapilir."
+                                            ]
+                              }
+                  }
 }
